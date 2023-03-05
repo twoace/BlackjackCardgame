@@ -19,7 +19,7 @@ def input_int(text: str, from_range: int, to_range: int) -> int:
         if from_range <= i <= to_range:
             break
         else:
-            print("Invalid number.")
+            print(f"Invalid number. Choose from {from_range} to {to_range}.")
     return i
 
 
