@@ -44,8 +44,8 @@ def draw_lines():
 
 # Settings Menü
 def settings_menu():
-    chips = input_int("Start chips (default: 1000): ", 2, 9999999)
-    min = input_int("Minimum bet (default: 200): ", 1, chips * 1000)
+    chips = input_int("Start chips (default: 1000): ", 3, 9999999)
+    min = input_int("Minimum bet (default: 200): ", int(chips / 3), chips * 1000)
     players = input_int("How many players (default: 1): ", 1, 99)
     return chips, min, players
 
