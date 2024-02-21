@@ -92,7 +92,7 @@ def hand_value(hand) -> int:
     ace = False
     for card in hand:
         points += card.value
-        if card.name == "Ass":
+        if card.value == 11:
             ace = True
     if points > 21 and ace:
         points -= 10
@@ -213,12 +213,12 @@ class Deck:
             "8": 8,
             "9": 9,
             "10": 10,
-            "Bube": 10,
-            "Dame": 10,
-            "König": 10,
-            "Ass": 11
+            "Jack": 10,
+            "Queen": 10,
+            "King": 10,
+            "Ace": 11
         }
-        colors = ["Herz", "Kreuz", "Pik", "Karo"]
+        colors = ["Hearts", "Clubs", "Spades", "Diamonds"]
         for color in colors:
             for key in cards:
                 self.cards.append(Card(key, color, cards[key]))
